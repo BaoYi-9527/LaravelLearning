@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Logics\BaseLogics;
+
+class {{ class }} extends BaseLogics
+{
+    // your code ...
+}

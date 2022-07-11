@@ -1,0 +1,161 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ baseControllerPath }};
+use App\Http\Requests\{{ subDir }}\CreateRequest;
+use App\Http\Requests\{{ subDir }}\DeleteRequest;
+use App\Http\Requests\{{ subDir }}\DetailRequest;
+use App\Http\Requests\{{ subDir }}\EditRequest;
+use App\Http\Requests\{{ subDir }}\ImportRequest;
+use App\Http\Requests\{{ subDir }}\ExportRequest;
+use App\Http\Requests\{{ subDir }}\ListRequest;
+
+
+class {{ class }} extends {{ baseController }}
+{
+    /**
+     * Notes:无需权限校验接口
+     * @return array
+     */
+    public function noCheckoutAuth(): array
+    {
+        return [
+            // your code...
+        ];
+    }
+
+    /**
+     * @api {get} [url] 列表接口
+     *
+     * @apiGroup  [模块名]
+     *
+     * @apiParam {Int} page 页码
+     * @apiParam {Int} per_page 每页记录数
+     *
+     * @apiSuccess {String} code 标识码 1-成功 其他-失败
+     * @apiSuccess {String} msg  响应信息
+     * @apiSuccess {Array}  data 数据包
+     *
+     * @apiSuccessExample {json} Success-Response:
+     * {Your response's json string...}
+     */
+    public function getList(ListRequest $request)
+    {
+        // your code...
+    }
+
+    /**
+     * @api {post} [url] 新增接口
+     *
+     * @apiGroup [模块名]
+     *
+     * @apiParam ...
+     *
+     * @apiSuccess {String} code 标识码 1-成功 其他-失败
+     * @apiSuccess {String} msg  响应信息
+     * @apiSuccess {Array}  data 数据包
+     *
+     * @apiSuccessExample {json} Success-Response:
+     * {"code":1,"msg":"操作成功","data":{"msg":"操作成功"}}
+     */
+    public function create(CreateRequest $request)
+    {
+        // your code...
+    }
+
+    /**
+     * @api {post} [url] 编辑接口
+     *
+     * @apiGroup [模块名]
+     *
+     * @apiParam ...
+     *
+     * @apiSuccess {String} code 标识码 1-成功 其他-失败
+     * @apiSuccess {String} msg  响应信息
+     * @apiSuccess {Array}  data 数据包
+     *
+     * @apiSuccessExample {json} Success-Response:
+     * {"code":1,"msg":"操作成功","data":{"msg":"操作成功"}}
+     */
+    public function edit(EditRequest $request)
+    {
+        // your code...
+    }
+
+    /**
+     * @api {get} [url] 详情接口
+     *
+     * @apiGroup [模块名]
+     *
+     * @apiParam ...
+     *
+     * @apiSuccess {String} code 标识码 1-成功 其他-失败
+     * @apiSuccess {String} msg  响应信息
+     * @apiSuccess {Array}  data 数据包
+     *
+     * @apiSuccessExample {json} Success-Response:
+     * {Your response's json string...}
+     */
+    public function detail(DetailRequest $request)
+    {
+        // your code...
+    }
+
+    /**
+     * @api {post} [url] 删除接口
+     *
+     * @apiGroup [模块名]
+     *
+     * @apiParam ...
+     *
+     * @apiSuccess {String} code 标识码 1-成功 其他-失败
+     * @apiSuccess {String} msg  响应信息
+     * @apiSuccess {Array}  data 数据包
+     *
+     * @apiSuccessExample {json} Success-Response:
+     * {"code":1,"msg":"操作成功","data":{"msg":"操作成功"}}
+     */
+    public function delete(DeleteRequest $request)
+    {
+        // your code...
+    }
+
+    /**
+     * @api {get} [url] 导出接口
+     *
+     * @apiGroup [模块名]
+     *
+     * @apiParam ...
+     *
+     * @apiSuccess {String} code 标识码 1-成功 其他-失败
+     * @apiSuccess {String} msg  响应信息
+     * @apiSuccess {Array}  data 数据包
+     *
+     * @apiSuccessExample {json} Success-Response:
+     * {Your response's json string...}
+     */
+    public function export(ExportRequest $request)
+    {
+        // your code...
+    }
+
+    /**
+     * @api {post} [url] 导入接口
+     *
+     * @apiGroup [模块名]
+     *
+     * @apiParam {file}  file 上传文件
+     *
+     * @apiSuccess {String} code 标识码 1-成功 其他-失败
+     * @apiSuccess {String} msg  响应信息
+     * @apiSuccess {Array}  data 数据包
+     *
+     * @apiSuccessExample {json} Success-Response:
+     * {Your response's json string...}
+     */
+    public function import(ImportRequest $request)
+    {
+        // your code...
+    }
+}

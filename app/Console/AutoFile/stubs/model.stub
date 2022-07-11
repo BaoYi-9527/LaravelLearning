@@ -1,0 +1,18 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Models\BaseModel;
+
+class {{ class }} extends BaseModel
+{
+    protected $table = '{{ tableName }}';
+
+    protected $fillable = [
+        {{ fillableArr }}
+    ];
+
+    protected $casts = [
+        // your code...
+    ];
+}

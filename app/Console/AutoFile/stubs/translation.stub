@@ -1,0 +1,20 @@
+<?php
+namespace {{ namespace }};
+
+use League\Fractal\TransformerAbstract;
+use App\Models\{{ modelPath }};
+
+class {{ class }} extends TransformerAbstract
+{
+    /**
+     * Notes:Data filter and transform
+     * @param $list[normal usage]
+     * @return array
+     */
+    public function transform({{ model }} $list): array
+    {
+        return [
+            // your code...
+        ];
+    }
+}
