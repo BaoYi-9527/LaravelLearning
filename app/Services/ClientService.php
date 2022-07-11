@@ -3,7 +3,6 @@
 namespace App\Services;
 
 use GuzzleHttp\Client;
-use mysql_xdevapi\Exception;
 
 class ClientService extends Singleton
 {
@@ -49,11 +48,12 @@ class ClientService extends Singleton
     /**
      * Notes: request
      * @return mixed
+     * @throws \Exception
      */
     public function request()
     {
         # 若没有初始化 client 使用默认
-        if (is_null($this->client)) throw new Exception('The client is not init, Connection first...');
+        if (is_null($this->client)) throw new \Exception('The client is not init, Connection first...');
 
         if ($this->method === self::REQUEST_METHOD_GET) {
             $options = ['query' => $this->data];
